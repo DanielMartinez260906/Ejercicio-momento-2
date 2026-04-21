@@ -12,8 +12,8 @@ export default function FormularioReserva() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
     }));
   };
@@ -57,7 +57,7 @@ export default function FormularioReserva() {
   return (
     <form className="formulario" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="nombre">Nombre</label>
+        <label htmlFor="nombre">Nombre *</label>
         <input
           type="text"
           id="nombre"
@@ -69,7 +69,7 @@ export default function FormularioReserva() {
       </div>
 
       <div className="form-group">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email *</label>
         <input
           type="email"
           id="email"
@@ -81,7 +81,7 @@ export default function FormularioReserva() {
       </div>
 
       <div className="form-group">
-        <label htmlFor="fecha">Fecha</label>
+        <label htmlFor="fecha">Fecha *</label>
         <input
           type="date"
           id="fecha"
@@ -92,7 +92,7 @@ export default function FormularioReserva() {
       </div>
 
       <div className="form-group">
-        <label htmlFor="horario">Horario</label>
+        <label htmlFor="horario">Horario *</label>
         <select
           id="horario"
           name="horario"
@@ -108,7 +108,7 @@ export default function FormularioReserva() {
       </div>
 
       <div className="form-group">
-        <label htmlFor="participantes">Cantidad de participantes</label>
+        <label htmlFor="participantes">Cantidad de participantes *</label>
         <input
           type="number"
           id="participantes"
