@@ -79,10 +79,10 @@ export default function FormularioReserva() {
             value={formData.experiencia}
             onChange={handleChange}
           >
-            <option value="">Selecciona tu nivel</option>
+            
             <option value="principiante">Principiante (Nunca he tenido un Bonsái)</option>
-            <option value="intermedio">Intermedio (He tenido algún Bonsái)</option>
-            <option value="avanzado">Avanzado (Cultivo Bonsáis regularmente)</option>
+            <option value="intermedio">Intermedio (Tengo algunos árboles)</option>
+            <option value="avanzado">Avanzado (Busco perfeccionar técnicas)</option>
           </select>
         </div>
 

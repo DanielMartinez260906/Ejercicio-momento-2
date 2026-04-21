@@ -23,12 +23,8 @@ export default function GaleriaPage() {
           {imagenes.map((imagen) => (
             <div key={imagen.id} className="galeria-item">
               <div className="galeria-placeholder">
-                <img
-                  src={`https://via.placeholder.com/300x300?text=${imagen.title}`}
-                  alt={imagen.title}
-                />
+                <p>{imagen.title}</p>
               </div>
-              <h3>{imagen.title}</h3>
             </div>
           ))}
         </section>
