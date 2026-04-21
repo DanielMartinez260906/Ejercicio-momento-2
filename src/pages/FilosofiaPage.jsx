@@ -10,6 +10,7 @@ export default function FilosofiaPage() {
         <Hero
           title="Menos es más"
           subtitle="Nuestra filosofia se centra en la observación y el respeto por los ritmos naturales.\nCreemos que cultivar un Bonsái no es solo jardinería, sino una meditación activa."
+          centered={true}
         />
         <section className="content-section">
           <p>

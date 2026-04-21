@@ -15,7 +15,8 @@ export default function HomePage() {
       <Header />
       <main className="main-content">
         <Hero
-          title="El arte de la paciencia"
+          title="El arte de la
+paciencia"
           subtitle="Descubre la serenidad a través del cuidado y diseño de árboles Bonsái.&#10;Un espacio para reconectar con la naturaleza."
           buttonText="Reserva un taller"
           onButtonClick={handleReservaClick}
