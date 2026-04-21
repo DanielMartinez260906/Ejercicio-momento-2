@@ -4,9 +4,7 @@ export default function FormularioReserva() {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
-    fecha: '',
-    horario: '',
-    participantes: '',
+    experiencia: '',
     mensaje: '',
   });
 
@@ -22,13 +20,7 @@ export default function FormularioReserva() {
     e.preventDefault();
 
     // Validar campos no vacíos
-    if (
-      !formData.nombre ||
-      !formData.email ||
-      !formData.fecha ||
-      !formData.horario ||
-      !formData.participantes
-    ) {
+    if (!formData.nombre || !formData.email || !formData.experiencia) {
       alert('Por favor, completa todos los campos obligatorios.');
       return;
     }
@@ -45,96 +37,71 @@ export default function FormularioReserva() {
     setFormData({
       nombre: '',
       email: '',
-      fecha: '',
-      horario: '',
-      participantes: '',
+      experiencia: '',
       mensaje: '',
     });
 
-    alert('¡Reserva guardada exitosamente!');
+    alert('¡Solicitud enviada exitosamente!');
   };
 
   return (
-    <form className="formulario" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="nombre">Nombre *</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-          placeholder="Tu nombre"
-        />
-      </div>
+    <div className="formulario-container">
+      <form className="formulario" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+            placeholder="Ej. Ana Silva"
+          />
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="email">Email *</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="tu@email.com"
-        />
-      </div>
+        <div className="form-group">
+          <label htmlFor="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="tu@email.com"
+          />
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="fecha">Fecha *</label>
-        <input
-          type="date"
-          id="fecha"
-          name="fecha"
-          value={formData.fecha}
-          onChange={handleChange}
-        />
-      </div>
+        <div className="form-group">
+          <label htmlFor="experiencia">Nivel de experiencia</label>
+          <select
+            id="experiencia"
+            name="experiencia"
+            value={formData.experiencia}
+            onChange={handleChange}
+          >
+            <option value="">Selecciona tu nivel</option>
+            <option value="principiante">Principiante (Nunca he tenido un Bonsái)</option>
+            <option value="intermedio">Intermedio (He tenido algún Bonsái)</option>
+            <option value="avanzado">Avanzado (Cultivo Bonsáis regularmente)</option>
+          </select>
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="horario">Horario *</label>
-        <select
-          id="horario"
-          name="horario"
-          value={formData.horario}
-          onChange={handleChange}
-        >
-          <option value="">Selecciona un horario</option>
-          <option value="09:00">09:00</option>
-          <option value="11:00">11:00</option>
-          <option value="14:00">14:00</option>
-          <option value="16:00">16:00</option>
-        </select>
-      </div>
+        <div className="form-group">
+          <label htmlFor="mensaje">Mensaje (Opcional)</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            value={formData.mensaje}
+            onChange={handleChange}
+            placeholder="¿Qué te gustaría aprender?"
+            rows="5"
+          ></textarea>
+        </div>
 
-      <div className="form-group">
-        <label htmlFor="participantes">Cantidad de participantes *</label>
-        <input
-          type="number"
-          id="participantes"
-          name="participantes"
-          value={formData.participantes}
-          onChange={handleChange}
-          placeholder="1"
-          min="1"
-        />
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="mensaje">Mensaje (opcional)</label>
-        <textarea
-          id="mensaje"
-          name="mensaje"
-          value={formData.mensaje}
-          onChange={handleChange}
-          placeholder="Cuéntanos algo sobre ti..."
-          rows="4"
-        ></textarea>
-      </div>
-
-      <button type="submit" className="btn btn-primary">
-        Confirmar Reserva
-      </button>
-    </form>
+        <button type="submit" className="btn btn-primary">
+          Enviar Solicitud
+        </button>
+      </form>
+    </div>
   );
 }

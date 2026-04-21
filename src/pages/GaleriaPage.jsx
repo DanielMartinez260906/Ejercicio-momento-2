@@ -3,12 +3,12 @@ import Footer from '../components/Footer';
 
 export default function GaleriaPage() {
   const imagenes = [
-    { id: 1, title: 'Bonsái 1' },
-    { id: 2, title: 'Bonsái 2' },
-    { id: 3, title: 'Bonsái 3' },
-    { id: 4, title: 'Bonsái 4' },
-    { id: 5, title: 'Bonsái 5' },
-    { id: 6, title: 'Bonsái 6' },
+    { id: 1, title: 'Arce Japonés' },
+    { id: 2, title: 'Pino Negro' },
+    { id: 3, title: 'Ficus Retusa' },
+    { id: 4, title: 'Olmo Chino' },
+    { id: 5, title: 'Enebro' },
+    { id: 6, title: 'Azalea' },
   ];
 
   return (
@@ -16,8 +16,8 @@ export default function GaleriaPage() {
       <Header />
       <main className="main-content">
         <div className="galeria-header">
-          <h1>Galería de Bonsáis</h1>
-          <p>Conoce nuestras colecciones de árboles maravillosos</p>
+          <h1>Nuestra Colección</h1>
+          <p>Un vistazo a algunos de los ejemplares en los que hemos trabajado. Cada árbol cuenta una historia de tiempo y paciencia.</p>
         </div>
         <section className="galeria-grid">
           {imagenes.map((imagen) => (

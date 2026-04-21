@@ -9,7 +9,7 @@ export default function ReservasPage() {
       <main className="main-content">
         <div className="reservas-header">
           <h1>Reserva un Taller</h1>
-          <p>Rellena el formulario para reservar tu lugar en nuestro próximo taller</p>
+          <p>Déjanos tus datos y nos pondremos en contacto para agendar tu primera sesión.</p>
         </div>
         <FormularioReserva />
       </main>

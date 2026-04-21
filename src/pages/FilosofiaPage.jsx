@@ -8,18 +8,12 @@ export default function FilosofiaPage() {
       <Header />
       <main className="main-content">
         <Hero
-          title="Filosofía Bonsái"
-          subtitle="La paciencia, la dedicación y el respeto por la naturaleza son los pilares de nuestro trabajo."
+          title="Menos es más"
+          subtitle="Nuestra filosofia se centra en la observación y el respeto por los ritmos naturales.\nCreemos que cultivar un Bonsái no es solo jardinería, sino una meditación activa."
         />
         <section className="content-section">
-          <h2>El Camino del Bonsái</h2>
           <p>
-            El arte del bonsái es más que una técnica de cultivo; es una filosofía de vida que
-            enseña paciencia, respeto y conexión con la naturaleza.
-          </p>
-          <p>
-            Cada árbol cuenta una historia, refleja el trabajo dedicado y la armonía entre el
-            cultivador y la planta.
+            En nuestro estudio, te enseñamos a escuchar al árbol, entendiendo que cada corte y cada alambrado debe tener un propósito. Buscamos el equilibrio perfecto entre la intervención humana y la expresión salvaje de la naturaleza.
           </p>
         </section>
       </main>
